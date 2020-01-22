@@ -1,0 +1,345 @@
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #EEE;
+	font-family: 'Source Sans Pro', sans-serif;
+	min-height: 100%;
+	position: relative;
+}
+
+#wrapper{
+	padding-bottom: 120px;
+	min-height: 100%;
+    background: #0aba90;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+input {outline: none;}
+select {cursor: pointer;}
+a,a:hover,a:focus,a:visited{text-decoration: none; color:inherit}
+
+/***********************************************************************************************/
+.botao,
+input,
+button,
+select {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	border-radius: 5px;
+	background: #FFF;
+}
+
+input,
+select {
+	border: 1px solid #CCC;
+	padding: 5px 10px;
+	transition: border-color 500ms, color 500ms;
+}
+input:hover,
+select:hover,
+input:focus,
+select:focus {
+	border: 1px solid #ffbbcb;
+	color: #0aba90;
+
+}
+
+/***********************************************************************************************/
+.botao{
+	border: none !important;
+	background: #0aba90;
+	padding: 7px 15px;
+	font-weight: bold;
+	color: #FFF !important;
+	cursor: pointer;
+	box-shadow: 0 0 0px transparent;
+	transition: background 500ms, box-shadow 500ms;
+	align-self: center;
+}
+.botao:hover{
+	background: #0aba60;
+	box-shadow: 0 0 10px rgba(255, 0, 60, 0.30);
+}
+
+.botao.cinza{
+	background: #989898;
+}
+.botao.cinza:hover{
+	background: #a7a7a7;
+	box-shadow: 0 0 10px rgba(160, 160, 160, 0.51);
+}
+
+/***********************************************************************************************/
+#header {
+	background: #0aba90;
+	display: flex;
+}
+
+#header .logotipo {
+	display: flex;
+	color: #FFF;
+	padding: 10px;
+}
+
+#header .logotipo img {
+	height: 50px;
+}
+
+#header .logotipo div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#header .logotipo span {
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: right;
+}
+
+#header .logotipo h1 {
+	font-family: 'Dosis', sans-serif;
+}
+
+/***********************************************************************************************/
+#header .menu {
+	font-family: 'Dosis', sans-serif;
+	text-transform: uppercase;
+	color: #ffd3de;
+	font-weight: bold;
+	background: #0aba60;
+	display: flex;
+	margin-left: 300px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+}
+
+#header .menu a {
+	margin: 0.5px;
+	padding-left: 70px;
+	padding-right: 70px;
+	display: flex;
+	transition: text-shadow 500ms, color 500ms;
+	text-shadow: 0 0 0px transparent;
+}
+#header .menu a:hover {
+	color: #FFF;
+	text-shadow: 0 0 5px #ffffff;
+}
+
+#header .menu a span {
+	margin: auto;
+}
+
+/***********************************************************************************************/
+footer {
+	background: #0aba90;
+	display: flex;
+	font-family: 'Dosis', sans-serif;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    margin-left: 450px;
+}
+
+footer img {
+	height: 100px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.36);
+	margin: 10px;
+}
+
+footer ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #FFF;
+	background: #0aba60;
+	padding: 0 25px;
+}
+
+footer ul b {
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+/***********************************************************************************************/
+#conteudo {
+	margin: 10px;
+	padding: 10px;
+	background: #FFF;
+	border-radius: 5px;
+}
+
+/***********************************************************************************************/
+.column {
+	flex-direction: column !important;
+}
+
+#conteudo header {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom: 1px dashed #dedede;
+	display: flex;
+}
+
+#conteudo header h1 {
+	font-size: 52px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: 'Dosis', sans-serif;
+	color: #0aba90;
+}
+
+/***********************************************************************************************/
+#conteudo .lista {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#conteudo .lista img {
+	width: 120px;
+	align-self: center;
+	border-radius: 0 5px 5px 0;
+}
+
+#conteudo .lista a {
+	width: 25%;
+	min-width: 25%;
+	max-width: 25%;
+	display: flex;
+}
+#conteudo .lista a:hover li{
+	opacity: 1;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#conteudo .lista a li {
+	flex-grow: 1;
+	display: flex;
+	margin: 8px; 
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	border-radius: 5px;
+	transition: box-shadow 200ms, opacity 200ms;
+	overflow: hidden;
+	font-weight: normal;
+	opacity: 0.8;
+}
+
+#conteudo .lista a div {
+	margin: auto 0;
+	padding: 15px;
+}
+
+/***********************************************************************************************/
+#conteudo .mensagem {
+	font-size: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: 'Dosis', sans-serif;
+	color: #0aba90;
+	padding: 100px;
+}
+
+/***********************************************************************************************/
+#conteudo .detalhes {
+	display: flex;
+}
+
+#conteudo .detalhes img {
+	width: 230px;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+
+#conteudo .detalhes ul b {
+	color: #0aba90;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+
+/***********************************************************************************************/
+.ferramentas {
+	margin-top: 5px;
+	display: flex;
+}
+
+.ferramentas.center a {
+	margin: auto;
+}
+
+.ferramentas.borda.cima {
+	border-top: 2px solid #EEE;
+	padding-top: 5px;
+	margin-top: 10px;
+}
+
+.ferramentas .botao {
+	margin-right: 5px;
+}
+
+.ferramentas form {
+	margin-top: 5px;
+	margin-left: auto;
+}
+
+.ferramentas form label {
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 5px;
+	text-transform: uppercase;
+}
+
+/***********************************************************************************************/
+.campos {
+	display: flex;
+}
+
+.campos > div {
+	padding: 5px;
+}
+
+.campos > div input:not([type="checkbox"]),
+.campos > div select {
+	width: 100%;
+}
+
+.campos > div > label {
+	display: flex;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.campos > div > ul {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+/***********************************************************************************************/
